@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* General Styling */
+body {
+	background: linear-gradient(to right, #8e54e9, #4776e6);
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  /* Main Container */
+  .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 900px;
+	padding: 20px;
+	text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* Title */
+  .title {
+	color: white;
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
   }
-}
+  
+  /* Video Container */
+  .video-container {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+  }
+  
+  .video {
+	width: 300px;
+	height: 200px;
+	border-radius: 10px;
+	border: 3px solid white;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* User Details & Controls */
+  .myId {
+	background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+	padding: 20px;
+	border-radius: 10px;
+	text-align: center;
+	margin: 20px 0;
+	width: 100%;
+	max-width: 500px;
+  }
+  
+  .myId input {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	margin-top: 10px;
+  }
+  
+  /* Buttons */
+  .call-button {
+	text-align: center;
+	margin-top: 20px;
+  }
+  
+  button {
+	padding: 10px 15px;
+	margin: 10px;
+	border: none;
+	border-radius: 5px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: 0.3s;
+  }
+  
+  button:hover {
+	opacity: 0.8;
+  }
+  
+  .call-btn {
+	background-color: #4caf50;
+	color: white;
+  }
+  
+  .answer-btn {
+	background-color: #007bff;
+	color: white;
+  }
+  
+  .end-call-btn {
+	background-color: #dc3545;
+	color: white;
+  }
+  
+  /* Caller Notification */
+  .caller {
+	text-align: center;
+	color: white;
+	font-size: 1.2rem;
+	margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+	.video-container {
+	  flex-direction: column;
+	}
+  
+	.video {
+	  width: 90%;
+	  height: auto;
+	}
+  
+	.myId {
+	  width: 90%;
+	}
+  }
+  
