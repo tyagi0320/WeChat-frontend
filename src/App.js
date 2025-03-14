@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import Peer from "simple-peer";
 import "./App.css";
 
-const socket = io.connect("http://localhost:5000");
+const socket = io.connect("https://wechat-backend-rzhi.onrender.com");
 
 function VideoCallApp() {
     const [userId, setUserId] = useState("");
